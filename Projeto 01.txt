@@ -1,0 +1,27 @@
+Projeto Realizado Durante o Curso "Google Cloud Essencials"
+
+1° - Criação de Uma Máquina Virtual no Console do Cloud
+Criação de uma nova instância na ferramenta "Compute Engine"
+
+Parâmetros Utilizados:
+Nome: gcelab
+Região: us-central1 (lowa)
+Zona: us-central1-f
+Série: N1
+Tipo de Máquina: 2 vCPU (2 CPUs e 7,5 de RAM)
+Disco de Inicialização: Novo disco permanente equilibrado de 10 GB Imagem do SO: Debian GNU/Linux 10 (buster)
+Firewall: Permitir tráfego HTTP
+
+Posteriormente foi feita a conexão da máquina virtual usando SSH.
+Obteve-se acesso ao terminal SSH
+
+2º - Instalação do Servidor da Web NGINX
+Em seguida realizou-se a instalação do servidor da web NGINX
+Execução do comando: sudo su -
+Atualização do SO apartir do comando: apt-get update
+Instalação do NGINX a partir do comando: apt-get install nginx -y
+Verificação de execução do NGINX a partir do comando: ps auwx | grep nginx
+
+3º - Criação de Uma Instância com a gcloud
+A gcloud é a ferramenta de linha de comando do Google Cloud Platform. Ele vem pré-instalado no Cloud Shell e aceita preenchimento com tabulação.
+Execução do comando: gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-central1-f
